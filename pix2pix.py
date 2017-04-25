@@ -247,7 +247,7 @@ def load_examples():
     if a.input_dir is None or not os.path.exists(a.input_dir):
         raise Exception("input_dir does not exist")
 
-    input_paths = glob.glob(os.path.joiinn(a.input_dir, "*.jpg"))
+    input_paths = glob.glob(os.path.join(a.input_dir, "*.jpg"))
     decode = tf.image.decode_jpeg
     if len(input_paths) == 0:
         input_paths = glob.glob(os.path.join(a.input_dir, "*.png"))
